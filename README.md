@@ -1,15 +1,20 @@
-# Node-Ethereum
- a simple standalone or embeddable Ethereum client written for Node.js.
+node-ethereum [![Build Status](https://travis-ci.org/ethereum/node-ethereum.svg)](https://travis-ci.org/ethereum/node-ethereum)
+===============
 
-# Install
+a simple standalone or embeddable Ethereum client written for Node.js.
+
+Install
+===
 `git clone https://github.com/wanderer/node-ethereum`  
 `cd ./node-ethereum`  
 `npm install .`
 
-# Run
+Run
+===
 `./bin/ethereum`
 
-# Embed
+Embed
+===
 ```javacsript
  App = require('../')
  app = new App();

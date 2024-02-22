@@ -1,0 +1,49 @@
+{
+  "name": "ethereum-client",
+  "version": "0.0.0",
+  "description": "a simple standalone or embeddable Ethereum client written for Node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanderer/ethereum-client"
+  },
+  "homepage": "https://github.com/wanderer/ethereum-client",
+  "bugs": "https://github.com/wanderer/ethereum-client/issues",
+  "main": "index.js",
+  "bin": {
+    "ethereum-client": "data.js"
+  },
+  "scripts": {
+    "test": "mocha --timeout 5000 --reporter spec ./test/app.js"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": [
+    {
+      "name": "Martin Becze",
+      "email": "mjbecze@gmail.com",
+      "url": "https://github.com/wanderer"
+    }
+  ],
+  "license": "GPL2",
+  "dependencies": {
+    "async": "*",
+    "bignum": "^0.9.0",
+    "ethereumjs-lib": "^0.1.5",
+    "express": "^4.8.5",
+    "jayson": "~1.1.1",
+    "jquery": "^2.1.1",
+    "leveldown": "~0.10.0",
+    "levelup": "~0.19.0",
+    "minimist": "*",
+    "nat-upnp": "*",
+    "npmlog": "*",
+    "request": "^2.40.0",
+    "semaphore": "~1.0.1",
+    "through": "^2.3.4",
+    "websocket-stream": "^0.6.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
