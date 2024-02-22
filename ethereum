@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var log = require('npmlog'),
+  App = require('../');
+
+var settings,
+  path = process.env['HOME'] + '/.ethereum-node';
+
+//try to load settings from home dir. or use the the standlone default settings
+try {
+  settings = require(path + '/settings.json');
+} catch (e) {
+  settings = require('./settings.json');
+}
+
+var app = new App(settings),
+  argv = require('minimist')(process.argv.slice(2));
+
+if (argv.help) {
+  console.log('TODO: write help');
+  process.exit();
+}
+
+app.start(function (err) {
+  if (err) log.error('start', err);
+  process.on('SIGTERM', shutdown);
+  process.on('SIGINT', shutdown);
+});
+
+function shutdown() {
+  app.log.info('app', 'shutting down');
+  app.stop(function () {
+    app.log.info('app', 'bye');
+  });
+}
