@@ -1,0 +1,12 @@
+{
+  "logging": 3,
+  "plugins": [
+    "../plugins/ws/ws.js",
+    "../plugins/webUI/"
+  ],
+  "network": {
+    "port": 30303,
+    "host": "0.0.0.0"
+  },
+  "upnp": true
+}
