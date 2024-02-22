@@ -2,14 +2,17 @@
 a simple standalone or embeddable Ethereum client written for Node.js.
 
 # Install
+
 git clone https://github.com/pidzart/Node-Ethereum/
 cd ./node-ethereum
 npm install .
 
-#Run
+# Run
+
 ./bin/ethereum
 
-#Embed
+# Embed
+
  App = require('../')
  app = new App();
  app.start(function(){
